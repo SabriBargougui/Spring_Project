@@ -18,10 +18,10 @@
     <nav class="left">
         <a href="#menu"><span>Menu</span></a>
     </nav>
-    <div th:if="${session.userdetails.role == T(com.team9.motors.model.Role).ADMIN}">
+    <div th:if="${session.userdetails.role == T(com.glsci.motors.model.Role).ADMIN}">
         <a href="/admin/dashboard" class="logo"><p th:utext = "${session.userdetails.firstName}+' ' +${session.userdetails.lastName}"></p></a>
     </div>
-    <div th:if="${session.userdetails.role == T(com.team9.motors.model.Role).MECHANIC}">
+    <div th:if="${session.userdetails.role == T(com.glsci.motors.model.Role).MECHANIC}">
         <a href="/mechanic/dashboard" class="logo"><p th:utext = "${session.userdetails.firstName}+' ' +${session.userdetails.lastName}"></p></a>
     </div>
     <nav class="right">
@@ -32,7 +32,7 @@
 <!-- Menu -->
 <nav id="menu">
      <ul class="links">
-        <li th:if="${session.userdetails.role == T(com.team9.motors.model.Role).ADMIN}"><a href="/admin/list">Employees</a></li>
+        <li th:if="${session.userdetails.role == T(com.glsci.motors.model.Role).ADMIN}"><a href="/admin/list">Employees</a></li>
         <li><a href="/all/supplier/list">Supplier</a></li>
         <li><a href="/all/product/list">Products</a></li>
         <li><a href="/all/catalogue/customers">Customers</a></li>
